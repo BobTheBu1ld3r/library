@@ -65,8 +65,21 @@ form {
   padding-right: 10px;
   padding-top: 30px;
   padding-bottom: 30px;
+  display: none;
 }
 
-.form-container {
+.form-container.active {
   position: relative;
+  border: 8px dashed grey;
+  border-radius: 8px;
+}
+
+.form-container.active::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: grey;
 }
