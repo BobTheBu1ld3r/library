@@ -65,16 +65,19 @@ form {
   padding-right: 10px;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+form.not-adding {
   display: none;
 }
 
-.form-container.active {
+.form-container.not-adding {
   position: relative;
   border: 8px dashed grey;
   border-radius: 8px;
 }
 
-.form-container.active::before {
+.form-container.not-adding::before {
   content: "+";
   position: absolute;
   top: 50%;

@@ -2,6 +2,13 @@ const submitButton = document.querySelector('button[type="submit"]');
 
 submitButton.addEventListener("click", addBookToLibrary);
 
+const formContainer = document.querySelector(".form-container");
+
+formContainer.addEventListener("click", (event) => {
+  formContainer.classList.toggle("not-adding");
+  document.querySelector("form").classList.toggle("not-adding");
+});
+
 const books = [];
 
 books[0] = new Book("The Hobbit", "J.R.R Tokien", 294, true);
