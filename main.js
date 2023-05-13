@@ -42,7 +42,7 @@ function displayBooks() {
     card.appendChild(author);
     card.appendChild(pages);
     card.appendChild(read);
-    main.appendChild(card);
+    main.insertBefore(card, document.querySelector("form"));
   });
 }
 
