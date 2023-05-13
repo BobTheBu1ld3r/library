@@ -4,11 +4,13 @@ submitButton.addEventListener("click", addBookToLibrary);
 
 const formContainer = document.querySelector(".form-container");
 
-formContainer.addEventListener("click", (event) => {
-  if (!formContainer.className.includes("not-adding")) return;
+formContainer.addEventListener("click", handleAdd);
+
+function handleAdd() {
   formContainer.classList.toggle("not-adding");
   document.querySelector("form").classList.toggle("not-adding");
-});
+  formContainer.removeEventListener("click", handleAdd);
+}
 
 const books = [];
 
@@ -32,6 +34,10 @@ function addBookToLibrary(event) {
   const newBook = new Book(title, author, pages, read);
   books.push(newBook);
   displayBook(newBook);
+  document.querySelector(".form-container").classList.toggle("not-adding");
+  document.querySelector("form").classList.toggle("not-adding");
+  event.stopPropagation();
+  formContainer.addEventListener("click", handleAdd);
   event.preventDefault();
 }
 
