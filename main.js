@@ -15,12 +15,12 @@ function Book(name, author, pages, read) {
   this.read = read;
 }
 
-function addBookToLibrary() {
+function addBookToLibrary(event) {
   const title = document.querySelector("#title").value;
   const author = document.querySelector("#author").value;
   const pages = document.querySelector("#pages").value;
   const read = document.querySelector("#read").checked;
 
-  books.push = new Book(title, author, pages, read);
-  console.log(books);
+  books.push(new Book(title, author, pages, read));
+  event.preventDefault();
 }
