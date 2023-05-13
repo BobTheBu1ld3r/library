@@ -5,6 +5,7 @@ submitButton.addEventListener("click", addBookToLibrary);
 const formContainer = document.querySelector(".form-container");
 
 formContainer.addEventListener("click", (event) => {
+  if (!formContainer.className.includes("not-adding")) return;
   formContainer.classList.toggle("not-adding");
   document.querySelector("form").classList.toggle("not-adding");
 });
