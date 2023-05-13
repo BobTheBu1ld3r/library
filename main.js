@@ -49,7 +49,7 @@ function displayBook(book) {
   card.appendChild(author);
   card.appendChild(pages);
   card.appendChild(read);
-  main.insertBefore(card, document.querySelector("form"));
+  main.insertBefore(card, document.querySelector(".form-container"));
 }
 
 displayBooks();
