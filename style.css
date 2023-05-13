@@ -30,8 +30,26 @@ main {
 .book-card {
   background-color: lightblue;
   padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .book-card > * {
   margin: 0;
+}
+
+.book-card > h3 {
+  font-size: 1.5rem;
+}
+
+.book-card > h4 {
+  font-weight: 600;
+  color: rgb(155, 155, 155);
+  flex: 1;
+}
+
+.book-card > p {
 }
