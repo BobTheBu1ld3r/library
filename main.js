@@ -24,3 +24,26 @@ function addBookToLibrary(event) {
   books.push(new Book(title, author, pages, read));
   event.preventDefault();
 }
+
+function displayBooks() {
+  books.forEach((e) => {
+    const main = document.querySelector("main");
+    const card = document.createElement("div");
+    card.classList.add("book-card");
+    const name = document.createElement("h3");
+    name.textContent = e.name;
+    const author = document.createElement("h4");
+    author.textContent = e.author;
+    const pages = document.createElement("p");
+    pages.textContent = e.pages;
+    const read = document.createElement("p");
+    read.textContent = e.read;
+    card.appendChild(name);
+    card.appendChild(author);
+    card.appendChild(pages);
+    card.appendChild(read);
+    main.appendChild(card);
+  });
+}
+
+displayBooks();
