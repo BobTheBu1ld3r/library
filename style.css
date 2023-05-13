@@ -29,4 +29,9 @@ main {
 
 .book-card {
   background-color: lightblue;
+  padding-left: 20px;
+}
+
+.book-card > * {
+  margin: 0;
 }
