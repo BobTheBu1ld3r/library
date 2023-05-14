@@ -56,9 +56,9 @@ function displayBook(book) {
   const author = document.createElement("h4");
   author.textContent = book.author;
   const pages = document.createElement("p");
-  pages.textContent = book.pages;
+  pages.textContent = `Pages: ${book.pages}`;
   const read = document.createElement("p");
-  read.textContent = book.read;
+  read.textContent = `Read: ${book.read ? "\u2714" : "\u2717"}`;
   card.appendChild(name);
   card.appendChild(author);
   card.appendChild(pages);
