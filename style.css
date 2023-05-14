@@ -52,6 +52,11 @@ main {
   right: 10px;
 }
 
+.book-card button {
+  background-color: transparent;
+  border: none;
+}
+
 .book-card > div:first-child svg {
   height: 1.5rem;
   fill: rgb(124, 124, 124);
