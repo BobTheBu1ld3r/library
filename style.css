@@ -71,9 +71,18 @@ form.not-adding {
   display: none;
 }
 
+.form-container {
+  --secondary-color: rgb(177, 177, 177);
+}
+
+.form-container:hover {
+  --secondary-color: rgb(56, 56, 56);
+  background-color: rgb(245, 245, 245);
+}
+
 .form-container.not-adding {
   position: relative;
-  border: 8px dashed grey;
+  border: 8px dashed var(--secondary-color);
   border-radius: 8px;
 }
 
@@ -84,5 +93,5 @@ form.not-adding {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 80px;
-  color: grey;
+  color: var(--secondary-color);
 }
