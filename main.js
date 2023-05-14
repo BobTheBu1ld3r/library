@@ -51,6 +51,8 @@ function displayBook(book) {
   const main = document.querySelector("main");
   const card = document.createElement("div");
   card.classList.add("book-card");
+  const cross = document.createElement("div");
+  cross.textContent = "\u274c";
   const name = document.createElement("h3");
   name.textContent = book.name;
   const author = document.createElement("h4");
@@ -59,6 +61,7 @@ function displayBook(book) {
   pages.textContent = `Pages: ${book.pages}`;
   const read = document.createElement("p");
   read.textContent = `Read: ${book.read ? "\u2714" : "\u2717"}`;
+  card.appendChild(cross);
   card.appendChild(name);
   card.appendChild(author);
   card.appendChild(pages);
