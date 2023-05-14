@@ -33,9 +33,10 @@ main {
   border-radius: 8px;
   box-shadow: 2px 2px 15px rgb(185, 185, 185);
   padding-left: 20px;
-  padding-right: 10px;
-  padding-top: 30px;
+  padding-right: 15px;
+  padding-top: 15px;
   padding-bottom: 30px;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -43,6 +44,23 @@ main {
 
 .book-card > * {
   margin: 0;
+}
+
+.book-card > div:first-child {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.book-card > div:first-child svg {
+  height: 1.5rem;
+  fill: rgb(124, 124, 124);
+}
+
+.book-card > div:first-child svg:hover {
+  height: 1.5rem;
+  fill: rgb(17, 17, 17);
+  transform: scale(1.1);
 }
 
 .book-card > h3 {
