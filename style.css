@@ -1,5 +1,11 @@
 :root {
   box-sizing: border-box;
+
+  --background-body: rgb(9, 8, 43);
+  --background-card: rgba(11, 11, 56, 89%);
+  --accent1: rgba(2, 132, 199, 100%);
+  --accent2: #40335c;
+  --text-color: #acd4e5;
 }
 
 *,
