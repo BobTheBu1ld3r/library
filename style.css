@@ -5,6 +5,8 @@
   --background-card: rgba(11, 11, 56, 89%);
   --accent1: rgba(2, 132, 199, 100%);
   --accent2: rgba(81, 68, 109, 57%);
+  --placeholder-color: rgba(172, 212, 229, 60%);
+  --line-color: #9e8bc5;
   --text-color: #afcdda;
 }
 
@@ -104,8 +106,18 @@ form input {
   border: none;
   border-bottom: 3px solid rgb(146, 146, 201);
   background-color: transparent;
-  width: 70%;
+  width: 50px;
   color: var(--text-color);
+}
+
+input::-webkit-input-placeholder {
+  color: var(--placeholder-color);
+  opacity: 1;
+}
+
+input::placeholder {
+  color: var(--placeholder-color);
+  opacity: 1;
 }
 
 #title {
