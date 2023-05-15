@@ -149,6 +149,7 @@ form.not-adding {
   position: relative;
   border: 5px dashed var(--secondary-color);
   border-radius: 8px;
+  background-color: var(--background-card);
 }
 
 .form-container.not-adding::before {
