@@ -4,8 +4,8 @@
   --background-body: rgb(9, 8, 43);
   --background-card: rgba(11, 11, 56, 89%);
   --accent1: rgba(2, 132, 199, 100%);
-  --accent2: #40335c;
-  --text-color: #acd4e5;
+  --accent2: rgba(81, 68, 109, 57%);
+  --text-color: #afcdda;
 }
 
 *,
@@ -35,7 +35,8 @@ main {
   row-gap: 3rem;
 }
 
-.book-card {
+.book-card,
+form {
   background-color: var(--background-card);
   border: 2px solid var(--accent1);
   border-left: 8px solid var(--accent1);
@@ -45,7 +46,9 @@ main {
   padding-top: 15px;
   padding-bottom: 30px;
   position: relative;
+}
 
+.book-card {
   display: flex;
   flex-direction: column;
 }
@@ -87,14 +90,6 @@ main {
 
 form {
   height: 100%;
-  background-color: rgb(255, 255, 255);
-  border: 4px solid black;
-  border-radius: 8px;
-  box-shadow: 2px 2px 15px rgb(185, 185, 185);
-  padding-left: 20px;
-  padding-right: 10px;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 form.not-adding {
@@ -102,17 +97,17 @@ form.not-adding {
 }
 
 .form-container {
-  --secondary-color: rgb(177, 177, 177);
+  --secondary-color: var(--accent2);
 }
 
 .form-container:hover {
-  --secondary-color: rgb(56, 56, 56);
-  background-color: rgb(245, 245, 245);
+  --secondary-color: #40335c;
+  /* background-color: rgb(245, 245, 245); */
 }
 
 .form-container.not-adding {
   position: relative;
-  border: 8px dashed var(--secondary-color);
+  border: 5px dashed var(--secondary-color);
   border-radius: 8px;
 }
 
