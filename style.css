@@ -73,14 +73,13 @@ form {
 }
 
 .close-icon {
-  height: 1.5rem;
-  fill: rgb(124, 124, 124);
+  height: 2rem;
+  fill: #5d67bf;
 }
 
 .close-icon:hover {
-  height: 1.5rem;
-  fill: rgb(17, 17, 17);
-  transform: scale(1.1);
+  fill: #a9afe7;
+  transform: scale(1.4);
 }
 
 .book-card > h3 {
