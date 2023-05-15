@@ -92,6 +92,46 @@ form {
   height: 100%;
 }
 
+form > div {
+  margin-bottom: 1rem;
+}
+
+form input {
+  border: none;
+  border-bottom: 3px solid rgb(146, 146, 201);
+  background-color: transparent;
+  width: 70%;
+  color: var(--text-color);
+}
+
+#title {
+  font-size: 1.5rem;
+}
+
+#author {
+  font-weight: 800;
+}
+
+form label:not(label[for="read"]) {
+  display: none;
+}
+
+input:focus,
+input:focus-visible {
+  outline: none;
+  background-color: #40335c;
+}
+
+form button {
+  height: 2rem;
+  width: 7rem;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 2px solid var(--accent2);
+  border-radius: 4px;
+}
+
 form.not-adding {
   display: none;
 }
