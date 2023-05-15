@@ -57,23 +57,27 @@ form {
   margin: 0;
 }
 
-.book-card > div:first-child {
+.book-card > div:first-child,
+.close {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-.book-card button {
+.book-card button,
+.close {
   background-color: transparent;
   border: none;
+  height: auto;
+  width: auto;
 }
 
-.book-card > div:first-child svg {
+.close-icon {
   height: 1.5rem;
   fill: rgb(124, 124, 124);
 }
 
-.book-card > div:first-child svg:hover {
+.close-icon:hover {
   height: 1.5rem;
   fill: rgb(17, 17, 17);
   transform: scale(1.1);
@@ -90,6 +94,7 @@ form {
 
 form {
   height: 100%;
+  position: relative;
 }
 
 form > div {
