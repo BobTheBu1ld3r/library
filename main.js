@@ -6,16 +6,30 @@ const formContainer = document.querySelector(".form-container");
 
 formContainer.addEventListener("click", handleAdd);
 
+window.addEventListener("click", handleClick);
+
+function handleClick(event) {
+  if (
+    formContainer.classList.contains("not-adding") ||
+    event.target.tagName !== "MAIN"
+  )
+    return event.stopPropagation();
+  closeForm(event);
+}
+
 function handleAdd() {
   formContainer.classList.toggle("not-adding");
   document.querySelector("form").classList.toggle("not-adding");
+  const closeButton = document.querySelector(".close");
+  closeButton.addEventListener("click", closeForm);
   formContainer.removeEventListener("click", handleAdd);
 }
 
-function closeForm() {
-  formContainer.classList.toggle("not-adding");
+function closeForm(event) {
+  document.querySelector(".form-container").classList.toggle("not-adding");
   document.querySelector("form").classList.toggle("not-adding");
   formContainer.addEventListener("click", handleAdd);
+  event.stopPropagation();
 }
 
 const books = [];
