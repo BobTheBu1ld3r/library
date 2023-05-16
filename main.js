@@ -11,7 +11,7 @@ window.addEventListener("click", handleClick);
 function handleClick(event) {
   if (
     formContainer.classList.contains("not-adding") ||
-    event.target.tagName !== "MAIN"
+    !"BODYMAINHTML".includes(event.target.tagName)
   )
     return event.stopPropagation();
   closeForm(event);
