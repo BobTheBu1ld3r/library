@@ -12,6 +12,12 @@ function handleAdd() {
   formContainer.removeEventListener("click", handleAdd);
 }
 
+function closeForm() {
+  formContainer.classList.toggle("not-adding");
+  document.querySelector("form").classList.toggle("not-adding");
+  formContainer.addEventListener("click", handleAdd);
+}
+
 const books = [];
 
 books[0] = new Book("The Hobbit", "J.R.R Tokien", 294, true);
