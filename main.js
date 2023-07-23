@@ -14,12 +14,32 @@ title.addEventListener("input", (event) => {
       title.nextElementSibling.textContent = "provide a title";
   } else {
     title.nextElementSibling.textContent = "";
-    title.nextElementSibling.remove("visible");
+    title.nextElementSibling.classList.remove("visible");
   }
 });
 
-form.addEventListener("change", () => {
-  console.log(form.validity);
+author.addEventListener("input", (event) => {
+  if (!author.validity.valid) {
+    author.nextElementSibling.classList.add("visible");
+    if (author.validity.tooShort)
+      author.nextElementSibling.textContent = "author is too short";
+    else if (author.validity.valueMissing)
+      author.nextElementSibling.textContent = "provide an author";
+  } else {
+    author.nextElementSibling.textContent = "";
+    author.nextElementSibling.classList.remove("visible");
+  }
+});
+
+pages.addEventListener("input", (event) => {
+  if (!pages.validity.valid) {
+    pages.nextElementSibling.classList.add("visible");
+    if (pages.validity.valueMissing)
+      pages.nextElementSibling.textContent = "provide pages";
+  } else {
+    pages.nextElementSibling.textContent = "";
+    pages.nextElementSibling.classList.remove("visible");
+  }
 });
 
 submitButton.addEventListener("click", addBookToLibrary);
