@@ -59,11 +59,16 @@ form {
   margin: 0;
 }
 
-.book-card > div:first-child,
+.book-card > div:first-child {
+  position: absolute;
+  top: 7px;
+  right: 5px;
+}
+
 .close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 7px;
+  right: -5px;
 }
 
 .book-card button,
@@ -75,7 +80,7 @@ form {
 }
 
 .close-icon {
-  height: 2rem;
+  height: 1rem;
   fill: #5d67bf;
 }
 
@@ -167,6 +172,10 @@ input:focus,
 input:focus-visible {
   outline: none;
   background-color: #40335c;
+}
+
+.error {
+  font-size: 12px;
 }
 
 form button {
