@@ -176,6 +176,11 @@ input:focus-visible {
 
 .error {
   font-size: 12px;
+  margin-left: 12px;
+  color: #8b90ff;
+  background-color: #40335c;
+  padding: 2px 4px;
+  border-radius: 4px;
 }
 
 form button {
