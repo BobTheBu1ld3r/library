@@ -42,7 +42,39 @@ pages.addEventListener("input", (event) => {
   }
 });
 
-submitButton.addEventListener("click", addBookToLibrary);
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  if (
+    !title.checkValidity() ||
+    !author.checkValidity() ||
+    !pages.checkValidity()
+  ) {
+    event.preventDefault();
+    if (!title.validity.valid) {
+      title.nextElementSibling.classList.add("visible");
+      if (title.validity.tooShort)
+        title.nextElementSibling.textContent = "title is too short";
+      else if (title.validity.valueMissing)
+        title.nextElementSibling.textContent = "provide a title";
+    }
+    if (!author.validity.valid) {
+      author.nextElementSibling.classList.add("visible");
+      if (author.validity.tooShort)
+        author.nextElementSibling.textContent = "author is too short";
+      else if (author.validity.valueMissing)
+        author.nextElementSibling.textContent = "provide an author";
+    }
+    if (!pages.validity.valid) {
+      pages.nextElementSibling.classList.add("visible");
+      if (pages.validity.valueMissing)
+        pages.nextElementSibling.textContent = "provide pages";
+    }
+  } else {
+    event.preventDefault();
+    addBookToLibrary();
+  }
+}
 
 const formContainer = document.querySelector(".form-container");
 
@@ -98,9 +130,7 @@ function addBookToLibrary(event) {
   displayBook(newBook);
   document.querySelector(".form-container").classList.toggle("not-adding");
   document.querySelector("form").classList.toggle("not-adding");
-  event.stopPropagation();
   formContainer.addEventListener("click", handleAdd);
-  event.preventDefault();
 }
 
 function displayBooks() {
