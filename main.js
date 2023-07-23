@@ -1,5 +1,27 @@
 const submitButton = document.querySelector('button[type="submit"]');
 
+const form = document.querySelector("form");
+const title = document.querySelector("#title");
+const author = document.querySelector("#author");
+const pages = document.querySelector("#pages");
+
+title.addEventListener("input", (event) => {
+  if (!title.validity.valid) {
+    title.nextElementSibling.classList.add("visible");
+    if (title.validity.tooShort)
+      title.nextElementSibling.textContent = "title is too short";
+    else if (title.validity.valueMissing)
+      title.nextElementSibling.textContent = "provide a title";
+  } else {
+    title.nextElementSibling.textContent = "";
+    title.nextElementSibling.remove("visible");
+  }
+});
+
+form.addEventListener("change", () => {
+  console.log(form.validity);
+});
+
 submitButton.addEventListener("click", addBookToLibrary);
 
 const formContainer = document.querySelector(".form-container");
