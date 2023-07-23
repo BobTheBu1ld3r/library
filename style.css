@@ -181,6 +181,11 @@ input:focus-visible {
   background-color: #40335c;
   padding: 2px 4px;
   border-radius: 4px;
+  opacity: 0;
+}
+
+.error.visible {
+  opacity: 1;
 }
 
 form button {
